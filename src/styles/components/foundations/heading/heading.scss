@@ -1,0 +1,24 @@
+$component: kdl-heading;
+
+@import './mapping';
+
+.#{$component} {
+  margin-block-start: 0;
+  margin-block-end: 0;
+
+}
+
+@each $color, $value in $heading-colors {
+  .color--#{"" + $color} {
+    color: map-deep-get($value, 'color');
+  }
+}
+
+@each $size, $value in $heading-sizes {
+  .#{$component}--#{$size} {
+    font-family: map-deep-get($value, 'font-family');
+    font-weight: map-deep-get($value, 'font-weight');
+    font-size: map-deep-get($value, 'font-size');
+    line-height: map-deep-get($value, 'line-height');
+  }
+}

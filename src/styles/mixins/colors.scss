@@ -1,0 +1,21 @@
+$colors: (
+  'primary-300': var(--color-primary-300),
+  'primary-400': var(--color-primary-400),
+  'primary-450': var(--color-primary-450),
+  'primary-500': var(--color-primary-500),
+  'secondary-300': var(--color-secondary-300),
+  'secondary-400': var(--color-secondary-400),
+  'secondary-500': var(--color-secondary-500),
+  'white': var(--color-white),
+  'black': var(--color-black)
+);
+
+@each $color, $value in $colors {
+  .bg--#{$color} {
+    background-color: $value;
+  }
+
+  .color--#{$color} {
+    color: $value;
+  }
+}

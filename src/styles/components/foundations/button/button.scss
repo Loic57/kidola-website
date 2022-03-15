@@ -1,0 +1,40 @@
+$component: kdl-button;
+
+@import 'mapping';
+
+.#{$component} {
+
+  cursor: pointer;
+  font-family: var(--font-family);
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  transition: background 0.2s, color 0.2s;
+
+
+  @each $color, $value in $button-colors {
+    &.#{$component}--#{$color} {
+      color: map-deep-get($value, 'color');
+      background: map-deep-get($value, 'background');
+
+      @media(hover: hover) {
+        &:not([disabled="true"]) {
+          &:hover {
+            color: map-deep-get($value, 'hover', 'color');
+            background: map-deep-get($value, 'hover', 'background');
+          }
+        }
+      }
+    }
+  }
+
+  @each $size, $value in $button-sizes {
+    &.#{$component}--#{$size} {
+      border-radius: map-deep-get($value, 'border-radius');
+      padding: map-deep-get($value, 'padding');
+      height: map-deep-get($value, 'height');
+      font-weight: map-deep-get($value, 'font-weight');
+      font-size: map-deep-get($value, 'font-size');
+    }
+  }
+}

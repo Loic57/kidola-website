@@ -1,0 +1,48 @@
+
+
+
+@mixin padding() {
+  @for $multiplicator from 0 through 35 {
+
+
+    .padding-top--#{$multiplicator} { padding-top: 0.8rem * $multiplicator!important; }
+    .padding-right--#{$multiplicator} { padding-right: 0.8rem * $multiplicator!important; }
+    .padding-bottom--#{$multiplicator} { padding-bottom: 0.8rem * $multiplicator!important; }
+    .padding-left--#{$multiplicator} { padding-left: 0.8rem * $multiplicator!important; }
+
+    @media(min-width: 0px) {
+      .padding-top--xxs--#{$multiplicator} { padding-top: 0.8rem * $multiplicator!important; }
+      .padding-right--xxs--#{$multiplicator} { padding-right: 0.8rem * $multiplicator!important; }
+      .padding-bottom--xxs--#{$multiplicator} { padding-bottom: 0.8rem * $multiplicator!important; }
+      .padding-left--xxs--#{$multiplicator} { padding-left: 0.8rem * $multiplicator!important; }
+    }
+
+    @media(min-width: 320px) {
+      .padding-top--xs--#{$multiplicator} { padding-top: 0.8rem * $multiplicator!important; }
+      .padding-right--xs--#{$multiplicator} { padding-right: 0.8rem * $multiplicator!important; }
+      .padding-bottom--xs--#{$multiplicator} { padding-bottom: 0.8rem * $multiplicator!important; }
+      .padding-left--xs--#{$multiplicator} { padding-left: 0.8rem * $multiplicator!important; }
+    }
+
+    @media(min-width: 414px) {
+      .padding-top--sm--#{$multiplicator} { padding-top: 0.8rem * $multiplicator!important; }
+      .padding-right--sm--#{$multiplicator} { padding-right: 0.8rem * $multiplicator!important; }
+      .padding-bottom--sm--#{$multiplicator} { padding-bottom: 0.8rem * $multiplicator!important; }
+      .padding-left--sm--#{$multiplicator} { padding-left: 0.8rem * $multiplicator!important; }
+    }
+
+    @media(min-width: 767px) {
+      .padding-top--md--#{$multiplicator} { padding-top: 0.8rem * $multiplicator!important; }
+      .padding-right--md--#{$multiplicator} { padding-right: 0.8rem * $multiplicator!important; }
+      .padding-bottom--md--#{$multiplicator} { padding-bottom: 0.8rem * $multiplicator!important; }
+      .padding-left--md--#{$multiplicator} { padding-left: 0.8rem * $multiplicator!important; }
+    }
+
+    @media(min-width: 1151px) {
+      .padding-top--lg--#{$multiplicator} { padding-top: 0.8rem * $multiplicator!important; }
+      .padding-right--lg--#{$multiplicator} { padding-right: 0.8rem * $multiplicator!important; }
+      .padding-bottom--lg--#{$multiplicator} { padding-bottom: 0.8rem * $multiplicator!important; }
+      .padding-left--lg--#{$multiplicator} { padding-left: 0.8rem * $multiplicator!important; }
+    }
+  }
+}

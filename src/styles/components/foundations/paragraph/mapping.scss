@@ -1,0 +1,45 @@
+$paragraph-colors: (
+  primary-500: (
+    color: var(--color-primary-500)
+  ),
+  secondary-400: (
+    color: var(--color-secondary-400)
+  ),
+  black: (
+    color: var(--color-black)
+  )
+);
+
+
+$paragraph-sizes: (
+  p1: (
+    font-size: var(--font-size-p1),
+    line-height: var(--line-height-p1),
+    font-weight: var(--font-weight-p1),
+  ),
+  p2: (
+    font-size: var(--font-size-p2),
+    line-height: var(--line-height-p2),
+    font-weight: var(--font-weight-p2),
+  ),
+  p3: (
+    font-size: var(--font-size-p3),
+    line-height: var(--line-height-p3),
+    font-weight: var(--font-weight-p3),
+  ),
+  p4: (
+    font-size: var(--font-size-p4),
+    line-height: var(--line-height-p4),
+    font-weight: var(--font-weight-p4),
+  ),
+  p5: (
+    font-size: var(--font-size-p5),
+    line-height: var(--line-height-p5),
+    font-weight: var(--font-weight-p5),
+  ),
+  p6: (
+    font-size: var(--font-size-p6),
+    line-height: var(--line-height-p6),
+    font-weight: var(--font-weight-p6),
+  ),
+)

@@ -1,0 +1,23 @@
+$component: kdl-paragraph;
+
+@import './mapping';
+
+.#{$component} {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-family: var(--font-family);
+}
+
+@each $color, $value in $paragraph-colors {
+  .color--#{"" + $color} {
+    color: map-deep-get($value, 'color');
+  }
+}
+
+@each $size, $value in $paragraph-sizes {
+  .#{$component}--#{$size} {
+    font-size: map-deep-get($value, 'font-size');
+    font-weight: map-deep-get($value, 'font-weight');
+    line-height: map-deep-get($value, 'line-height');
+  }
+}

@@ -1,0 +1,48 @@
+
+
+
+@mixin margin() {
+  @for $multiplicator from 0 through 35 {
+
+
+    .margin-top--#{$multiplicator} { margin-top: 0.8rem * $multiplicator!important; }
+    .margin-right--#{$multiplicator} { margin-right: 0.8rem * $multiplicator!important; }
+    .margin-bottom--#{$multiplicator} { margin-bottom: 0.8rem * $multiplicator!important; }
+    .margin-left--#{$multiplicator} { margin-left: 0.8rem * $multiplicator!important; }
+
+    @media(min-width: 0px) {
+      .margin-top--xxs--#{$multiplicator} { margin-top: 0.8rem * $multiplicator!important; }
+      .margin-right--xxs--#{$multiplicator} { margin-right: 0.8rem * $multiplicator!important; }
+      .margin-bottom--xxs--#{$multiplicator} { margin-bottom: 0.8rem * $multiplicator!important; }
+      .margin-left--xxs--#{$multiplicator} { margin-left: 0.8rem * $multiplicator!important; }
+    }
+
+    @media(min-width: 320px) {
+      .margin-top--xs--#{$multiplicator} { margin-top: 0.8rem * $multiplicator!important; }
+      .margin-right--xs--#{$multiplicator} { margin-right: 0.8rem * $multiplicator!important; }
+      .margin-bottom--xs--#{$multiplicator} { margin-bottom: 0.8rem * $multiplicator!important; }
+      .margin-left--xs--#{$multiplicator} { margin-left: 0.8rem * $multiplicator!important; }
+    }
+
+    @media(min-width: 414px) {
+      .margin-top--sm--#{$multiplicator} { margin-top: 0.8rem * $multiplicator!important; }
+      .margin-right--sm--#{$multiplicator} { margin-right: 0.8rem * $multiplicator!important; }
+      .margin-bottom--sm--#{$multiplicator} { margin-bottom: 0.8rem * $multiplicator!important; }
+      .margin-left--sm--#{$multiplicator} { margin-left: 0.8rem * $multiplicator!important; }
+    }
+
+    @media(min-width: 767px) {
+      .margin-top--md--#{$multiplicator} { margin-top: 0.8rem * $multiplicator!important; }
+      .margin-right--md--#{$multiplicator} { margin-right: 0.8rem * $multiplicator!important; }
+      .margin-bottom--md--#{$multiplicator} { margin-bottom: 0.8rem * $multiplicator!important; }
+      .margin-left--md--#{$multiplicator} { margin-left: 0.8rem * $multiplicator!important; }
+    }
+
+    @media(min-width: 1151px) {
+      .margin-top--lg--#{$multiplicator} { margin-top: 0.8rem * $multiplicator!important; }
+      .margin-right--lg--#{$multiplicator} { margin-right: 0.8rem * $multiplicator!important; }
+      .margin-bottom--lg--#{$multiplicator} { margin-bottom: 0.8rem * $multiplicator!important; }
+      .margin-left--lg--#{$multiplicator} { margin-left: 0.8rem * $multiplicator!important; }
+    }
+  }
+}
