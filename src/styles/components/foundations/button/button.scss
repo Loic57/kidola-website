@@ -10,7 +10,7 @@ $component: kdl-button;
   display: inline-flex;
   align-items: center;
   transition: background 0.2s, color 0.2s;
-
+  text-decoration: none;
 
   @each $color, $value in $button-colors {
     &.#{$component}--#{$color} {
@@ -35,6 +35,22 @@ $component: kdl-button;
       height: map-deep-get($value, 'height');
       font-weight: map-deep-get($value, 'font-weight');
       font-size: map-deep-get($value, 'font-size');
+    }
+  }
+
+  &--icon {
+    background-color: #5B6DF7;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    padding-left: 0.8rem!important;
+    font-size: 2.4rem;
+    height: 6.4rem;
+    padding: 0 4rem;
+    font-weight: 700;
+    border-radius: 1.6rem;
+
+    [data-gatsby-image-wrapper] {
+      margin-right: 3.2rem;
     }
   }
 }

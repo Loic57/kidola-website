@@ -7,13 +7,14 @@
 @import './mixins/paddings';
 @import './mixins/colors';
 
-@import './utils/text';
+@import './utils/utils';
 
 @import './components/foundations/button/button';
 @import './components/foundations/heading/heading';
 @import './components/foundations/paragraph/paragraph';
 
 @import './components/layouts/grid/grid';
+@import './components/layouts/footer/footer';
 
 @import './site';
 

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Volkhov:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap');
 
 :root {
   --color-primary-300: #EBEDFF;
@@ -10,6 +10,7 @@
   --color-primary-700: #02259A;
   --color-primary-800: #01259B;
 
+  --color-secondary-400: #FEB4CE;
   --color-secondary-500: #F37CA7;
   --color-secondary-600: #EE5C91;
   --color-secondary-700: #EF4A68;
@@ -24,6 +25,7 @@
   --color-quinary-600: #14CA72;
 
   --color-grey-200: #ECEBED;
+  --color-grey-400: #8594C5;
   --color-grey-500: #5B575F;
 
   --color-white: #FFFFFF;
@@ -38,23 +40,23 @@
 
   --font-size-h1: 4.8rem;
   --line-height-h1: 5.6rem;
-  --font-weight-h1: 500;
+  --font-weight-h1: 700;
 
   --font-size-h2: 4.8rem;
   --line-height-h2: 4.8rem;
-  --font-weight-h2: 500;
+  --font-weight-h2: 700;
 
   --font-size-h3: 4rem;
   --line-height-h3: 4rem;
-  --font-weight-h3: 500;
+  --font-weight-h3: 700;
 
   --font-size-h4: 3.2rem;
   --line-height-h4: 3.2rem;
-  --font-weight-h4: 500;
+  --font-weight-h4: 700;
 
   --font-size-h5: 2.4rem;
   --line-height-h5: 2.4rem;
-  --font-weight-h5: 500;
+  --font-weight-h5: 700;
 
   --font-size-h6: 2rem;
   --line-height-h6: 2rem;

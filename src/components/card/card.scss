@@ -5,7 +5,13 @@ $component: kdl-card;
   background-color: var(--color-white);
   padding: 3.2rem;
   text-align: left;
+  height: 100%;
 
+
+  [data-gatsby-image-wrapper] {
+    min-width: 40px!important;
+    min-height: 40px!important;
+  }
 
   header {
     margin-bottom: 2.4rem;

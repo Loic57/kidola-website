@@ -15,4 +15,95 @@
 .kdl-container {
   max-width: 1174px;
   margin: auto;
+
+  &--800 {
+    max-width: 800px;
+  }
+}
+
+.kdl-tablet {
+  margin-top: -42.2rem;
+  padding-top: 42.2rem;
+
+  &__image {
+    text-align: center;
+    margin-left: -11rem;
+  }
+}
+
+.kdl-team {
+  margin-bottom: -12rem;
+}
+
+
+blockquote {
+  font-style: italic;
+  font-family: var(--font-family-2);
+  font-weight: 400;
+  color: var(--color-primary-500);
+  font-size: var(--font-size-h5);
+  line-height: 33px;
+  margin-bottom: 4rem;
+
+  & + figcaption {
+    font-family: var(--font-family);
+    text-align: center;
+    font-weight: 700;
+    color: var(--color-primary-500);
+    font-size: var(--font-size-p1);
+    margin-bottom: 4rem;
+
+    span {
+      font-weight: 400;
+      font-size: var(--font-size-p3)
+    }
+  }
+}
+
+.card-nursery {
+  text-align: center;
+  border: 8px solid var(--color-primary-300);
+  border-radius: 4.8rem;
+  height: 240px;
+  width: 240px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  transition: .2s;
+  overflow: hidden;
+
+  @media(hover: hover) {
+    &:hover {
+      border: 8px solid var(--color-primary-500);
+    }
+  }
+}
+
+.kdl-slider-nurseries {
+  padding-top: 2rem!important;
+  padding-bottom: 2rem!important;
+
+  .swiper-slide {
+    width: 200px;
+  }
+
+
+  .slide:nth-child(even) .card-nursery {
+    transform: rotate(10deg);
+  }
+
+  .slide:nth-child(odd) .card-nursery {
+    transform: rotate(-10deg);
+  }
+}
+
+.kdl-link {
+  color: var(--color-grey-500);
+  transition: 0.2s;
+
+  @media(hover: hover) {
+    &:hover {
+      color: var(--color-primary-500);
+    }
+  }
 }

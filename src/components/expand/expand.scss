@@ -1,0 +1,46 @@
+$component: kdl-expand;
+
+.#{$component} {
+  background-color: var(--color-white);
+  border-radius: 24px;
+  text-align: left;
+  padding: 1.6rem 1.6rem 1.6rem 2.4rem;
+  margin-bottom: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 80px;
+
+  &__content {
+    visibility: hidden;
+    max-height: 0;
+    transition: 0.3s;
+    opacity: 0;
+
+    .#{$component}--expanded & {
+      visibility: visible;
+      max-height: 150px;
+      opacity: 1;
+    }
+  }
+
+  &__trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    button {
+      background: none;
+      border: none;
+      transform: rotate(0);
+      transition: 0.2s;
+    }
+
+    .#{$component}--expanded & {
+
+      button {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
