@@ -2,17 +2,17 @@ import React from 'react';
 
 import { graphql } from "gatsby"
 
-import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { StaticImage } from "gatsby-plugin-image"
 
 import Header from '../components/header/header'
 import Seo from "../components/seo"
+import Footer from "../components/footer/footer"
 
 import "../styles/app.scss";
 
 
 export default function IndexPage(props) {
-
-  console.log(props)
 
   const { t } = useTranslation();
 
@@ -27,6 +27,18 @@ export default function IndexPage(props) {
       />
 
       <Header {...props} />
+
+      <div className="text--center">
+        <StaticImage
+          src="../assets/images/logo.svg"
+          quality={100}
+          formats={["auto", "webp", "avif"]}
+          alt="Kidola App"
+          className="kdl-logo margin-bottom--10"
+        />
+      </div>
+
+      <Footer {...props} />
     </>
   )
 }

@@ -4,7 +4,7 @@ import { Autoplay } from "swiper";
 
 import TypeIt from "typeit-react";
 
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
 
@@ -12,13 +12,12 @@ import Header from '../components/header/header'
 import Card from '../components/card/card'
 import Seo from "../components/seo"
 import Expand from "../components/expand/expand"
+import Footer from "../components/footer/footer"
 
 import "../styles/app.scss";
 import 'swiper/css';
 
 export default function IndexPage(props) {
-
-  console.log(props)
 
   const { t } = useTranslation();
   const currentLang = props.pageContext.language;
@@ -164,7 +163,7 @@ export default function IndexPage(props) {
         <div className="kdl-tablet kdl-container kdl-section bg--primary-300 padding-bottom--10 border-bottom-left-radius--24 border-bottom-right-radius--24">
           <div className="kdl-container kdl-container--800">
             <p className="kdl-paragraph kdl-paragraph--p1 color--primary-500 margin-bottom--8"><Trans i18nKey="section-3.text-2" /></p>
-            <a href="#" className="kdl-button kdl-button--gradient kdl-button--default">{t('section-3.btn')}</a>
+            <a href="https://google.fr" className="kdl-button kdl-button--gradient kdl-button--default">{t('section-3.btn')}</a>
           </div>
         </div>
 
@@ -194,7 +193,7 @@ export default function IndexPage(props) {
         </div>
         <div className="kdl-container kdl-section bg--primary-300 padding-top--4 padding-bottom--4 padding-top--md--8 padding-bottom--md--8 border-bottom-left-radius--24 border-bottom-right-radius--24">
           <div className="kdl-container kdl-container--800">
-            <a href="#" className="kdl-button kdl-button--gradient kdl-button--default">{t('section-4.btn')}</a>
+            <a href="https://google.fr" className="kdl-button kdl-button--gradient kdl-button--default">{t('section-4.btn')}</a>
           </div>
         </div>
 
@@ -219,7 +218,7 @@ export default function IndexPage(props) {
               <p><Trans i18nKey="section-5.text-2" /></p>
             </blockquote>
             <figcaption><Trans i18nKey="section-5.text-3" /><span><Trans i18nKey="section-5.text-4" /></span></figcaption>
-            <a href="#" className="kdl-button kdl-button--gradient kdl-button--default"><Trans i18nKey="section-5.btn" /></a>
+            <a href="https://google.fr" aria-label="section-5.btn" className="kdl-button kdl-button--gradient kdl-button--default"><Trans i18nKey="section-5.btn" /></a>
           </div>
         </div>
 
@@ -322,7 +321,7 @@ export default function IndexPage(props) {
             </a>
           </SwiperSlide>
           <SwiperSlide className='slide'>
-            <a href="#" target={'_blank'} rel="noreferrer" className='card-nursery'>
+            <a href="https://google.fr" target={'_blank'} rel="noreferrer" className='card-nursery'>
               <StaticImage
                 src="../assets/images/creches/famil-logo.png"
                 width={240}
@@ -398,73 +397,7 @@ export default function IndexPage(props) {
           className="kdl-logo margin-top--16 margin-bottom--4"
         />
 
-        <div className="footer">
-          <div className="footer__line">
-            <a href="tel:0032499618944" className="kdl-button kdl-button--icon">
-              <StaticImage
-                src="../assets/images/icon-phone.png"
-                width={40}
-                quality={100}
-                formats={["auto", "webp", "avif"]}
-                alt="Kidola App"
-              />
-              0032 499 618 944
-            </a>
-            <a href="mailto:hello@kidola.lu" className="kdl-button kdl-button--icon">
-              <StaticImage
-                src="../assets/images/icon-phone.png"
-                width={40}
-                quality={100}
-                formats={["auto", "webp", "avif"]}
-                alt="Kidola App"
-              />
-              hello@kidola.lu
-            </a>
-          </div>
-
-          <div className="footer__social">
-            <a href="https://www.linkedin.com/company/kidola/" target="_blank" rel="noreferrer" className="button button--icon-only button--with-icon">
-              <StaticImage
-                src="../assets/images/icon-linkedin.png"
-                width={40}
-                quality={100}
-                formats={["auto", "webp", "avif"]}
-                alt="Kidola App"
-              />
-            </a>
-            <a href="https://twitter.com/Kidolapp" className="button button--icon-only button--with-icon">
-              <StaticImage
-                src="../assets/images/icon-twitter.png"
-                width={40}
-                quality={100}
-                formats={["auto", "webp", "avif"]}
-                alt="Kidola App"
-              />
-            </a>
-            <a href="https://www.facebook.com/kidolapp/ " className="button button--icon-only button--with-icon">
-              <StaticImage
-                src="../assets/images/icon-facebook.png"
-                width={40}
-                quality={100}
-                formats={["auto", "webp", "avif"]}
-                alt="Kidola App"
-              />
-            </a>
-          </div>
-
-          <div className='text--center'>
-            <p className="kdl-paragraph kdl-paragraph--p2 margin-bottom--3 color--grey-500">
-              <Link to='/terms' className="kdl-link"><Trans i18nKey="footer.terms" /></Link>&nbsp;
-              •  <a href="#" className="kdl-link"><Trans i18nKey="footer.rgpd" /></a>&nbsp;
-              •  <a href="#" className="kdl-link"><Trans i18nKey="footer.data-protection" /></a>&nbsp;
-              •  <a href="#" className="kdl-link"><Trans i18nKey="footer.cookies" /></a>&nbsp; <br />
-              <strong><Trans i18nKey="footer.address" /></strong> • <Trans i18nKey="footer.rcs" />
-            </p>
-
-            <p className="kdl-paragraph kdl-paragraph--p3 margin-bottom--3 color--grey-500"><Trans i18nKey="footer.copyright" /></p>
-            <p className="kdl-paragraph kdl-paragraph--p4 color--grey-500"><Trans i18nKey="footer.developer" />&nbsp;<a href="https://loic-sciampagna.fr" target="_blank" rel="noreferrer" className="kdl-link">Loïc Sciampagna</a></p>
-          </div>
-        </div>
+        <Footer {...props} />
 
       </div>
 {/*       <p>
