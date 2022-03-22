@@ -20,6 +20,11 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden
+}
+
+body, #___gatsby, #gatsby-focus-wrapper {
+  overflow-x: hidden
 }
 
 @include margin();

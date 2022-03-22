@@ -1,4 +1,5 @@
 ---
+lang: fr
 title: Places disponnibles
 image: ../../static/images/cards/icon-group.png
 imageAlt: Test

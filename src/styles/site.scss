@@ -1,23 +1,55 @@
+.kdl-logo {
+  width: 240px;
+
+  @media(max-width: 767px) {
+   width: 150px;
+  }
+}
+
 .kdl-agenda {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 14rem;
-  margin-bottom: -24rem;
+
+  > [data-gatsby-image-wrapper] {
+    margin-bottom: -15.4rem;
+  }
 
   button {
     margin-bottom: -4rem;
     position: relative;
     z-index: 1;
   }
+
+  @media(max-width: 1174px) {
+    margin-top: 4rem;
+
+    > [data-gatsby-image-wrapper] {
+      margin-bottom: -14%;
+    }
+  }
+
+  @media(max-width: 767px) {
+    margin-top: 4rem;
+
+    button {
+      margin-bottom: -2rem;
+    }
+  }
 }
 
 .kdl-container {
-  max-width: 1174px;
+  width: 1174px;
+  max-width: 100%;
   margin: auto;
+  padding: 0 1.6rem;
 
   &--800 {
-    max-width: 800px;
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    padding: 0;
   }
 }
 
@@ -28,11 +60,29 @@
   &__image {
     text-align: center;
     margin-left: -11rem;
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  @media(max-width: 767px) {
+    &__image {
+      display: none;
+
+      &--mobile {
+        display: block;
+      }
+    }
   }
 }
 
 .kdl-team {
   margin-bottom: -12rem;
+
+  @media(max-width: 1174px) {
+    margin-bottom: -18%;
+  }
 }
 
 
@@ -94,6 +144,12 @@ blockquote {
 
   .slide:nth-child(odd) .card-nursery {
     transform: rotate(-10deg);
+  }
+
+  @media(max-width: 767px) {
+    .swiper-slide {
+      width: 100px;
+    }
   }
 }
 

@@ -1,4 +1,5 @@
 ---
+lang: fr
 title: Application parents
 image: ../../static/images/cards/icon-bulk.png
 imageAlt: Test

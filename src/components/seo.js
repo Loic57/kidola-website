@@ -6,47 +6,28 @@
  */
 
 import * as React from "react"
-import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
 
-function Seo({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
-
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+function Seo({ googleTitle, googleDescription, socialTitle, socialDescription, lang, meta, author }) {
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      title={googleTitle}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: googleDescription,
         },
         {
           property: `og:title`,
-          content: title,
+          content: socialTitle,
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: socialDescription,
         },
         {
           property: `og:type`,
@@ -58,15 +39,15 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: author,
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: socialTitle,
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: socialDescription,
         },
       ].concat(meta)}
     />
@@ -74,16 +55,10 @@ function Seo({ description, lang, meta, title }) {
 }
 
 Seo.defaultProps = {
-  lang: `en`,
+  lang: `fr`,
   meta: [],
   description: ``,
 }
 
-Seo.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-}
 
 export default Seo

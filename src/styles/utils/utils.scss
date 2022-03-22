@@ -9,3 +9,10 @@
 .border-top-right-radius--24 { border-top-right-radius: 24px; }
 .border-bottom-left-radius--24 { border-bottom-left-radius: 24px; }
 .border-bottom-right-radius--24 { border-bottom-right-radius: 24px; }
+
+@media(max-width: 767px) {
+  .border-top-left-radius--24 { border-top-left-radius: 0; }
+  .border-top-right-radius--24 { border-top-right-radius: 0; }
+  .border-bottom-left-radius--24 { border-bottom-left-radius: 0; }
+  .border-bottom-right-radius--24 { border-bottom-right-radius: 0; }
+}

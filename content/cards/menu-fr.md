@@ -1,4 +1,5 @@
 ---
+lang: fr
 title: Menu des repas
 image: ../../static/images/cards/icon-noon-food.png
 imageAlt: Test

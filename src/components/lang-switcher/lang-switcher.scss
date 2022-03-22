@@ -1,0 +1,23 @@
+$component: kdl-lang-switcher;
+
+.#{$component} {
+  display: inline-block;
+  position: relative;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    display: none;
+    position: absolute;
+
+    & > * {
+      margin-top: 0.8rem;
+    }
+  }
+
+  &:hover {
+    .#{$component}__list {
+      display: flex;
+    }
+  }
+}

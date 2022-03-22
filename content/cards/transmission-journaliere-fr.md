@@ -1,4 +1,5 @@
 ---
+lang: fr
 title: Transmision journalière
 image: ../../static/images/cards/icon-timesheet.png
 imageAlt: Test

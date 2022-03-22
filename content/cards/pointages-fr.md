@@ -1,4 +1,5 @@
 ---
+lang: fr
 title: Vérifiez les pointages
 image: ../../static/images/cards/icon-time.png
 imageAlt: Test

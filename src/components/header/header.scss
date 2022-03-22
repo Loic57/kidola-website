@@ -1,7 +1,13 @@
 $component: kdl-header;
 
 .#{$component} {
-  padding: 3.2rem 0;
-  width: 1174px;
+  padding: 3.2rem 1.6rem;
+  max-width: 1174px;
   margin: 0 auto 9.6rem;
+  display: flex;
+  justify-content: flex-end;
+
+  @media(max-width: 767px) {
+    margin: 0 auto 4rem;
+  }
 }

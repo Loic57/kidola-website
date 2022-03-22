@@ -1,10 +1,7 @@
 import * as React from "react"
-
-
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import './card.scss';
-
 
 export default function Card(props) {
   return (
@@ -21,4 +18,3 @@ export default function Card(props) {
     </article>
   )
 }
-

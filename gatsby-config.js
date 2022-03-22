@@ -1,17 +1,6 @@
-
-const languages = require('./src/data/languages');
-
 module.exports = {
-  siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
-    languages
-  },
   plugins: [
     `gatsby-plugin-sass`,
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -21,6 +10,22 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/assets/images`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`,
+        languages: [`en`, `fr`, `de`, 'lu'],
+        defaultLanguage: `fr`,
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false
+          },
+          ns: ['index', 'terms'],
+          keySeparator: false,
+          nsSeparator: ":"
+        }
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -36,16 +41,6 @@ module.exports = {
         icon: `src/assets/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: 'gatsby-plugin-i18n',
-      options: {
-        langKeyForNull: 'any',
-        langKeyDefault: languages.defaultLangKey,
-        useLangKeyLayout: true,
-        prefixDefault: false,
-      }
-    },
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -60,6 +55,13 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/static/images`,
       },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/locales`,
+        name: `locale`
+      }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

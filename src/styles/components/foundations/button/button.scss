@@ -9,19 +9,34 @@ $component: kdl-button;
   border: 0;
   display: inline-flex;
   align-items: center;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.4s, color 0.2s;
   text-decoration: none;
+
 
   @each $color, $value in $button-colors {
     &.#{$component}--#{$color} {
       color: map-deep-get($value, 'color');
-      background: map-deep-get($value, 'background');
+
+      @if map-deep-get($value, 'background-image') {
+        background: map-deep-get($value, 'background-image');
+      }
+      @else {
+        background-color: map-deep-get($value, 'background-color');
+      }
+
 
       @media(hover: hover) {
         &:not([disabled="true"]) {
           &:hover {
+            background-position: right center;
             color: map-deep-get($value, 'hover', 'color');
-            background: map-deep-get($value, 'hover', 'background');
+
+            @if map-deep-get($value, 'background-image') {
+              background: map-deep-get($value, 'hover', 'background-image');
+            }
+            @else {
+              background-color: map-deep-get($value, 'hover', 'background-color');
+            }
           }
         }
       }
@@ -35,6 +50,15 @@ $component: kdl-button;
       height: map-deep-get($value, 'height');
       font-weight: map-deep-get($value, 'font-weight');
       font-size: map-deep-get($value, 'font-size');
+
+
+      @media(max-width: 767px) {
+        border-radius: map-deep-get($value, 'mobile', 'border-radius');
+        padding: map-deep-get($value, 'mobile', 'padding');
+        height: map-deep-get($value, 'mobile', 'height');
+        font-weight: map-deep-get($value, 'mobile', 'font-weight');
+        font-size: map-deep-get($value, 'mobile', 'font-size');
+      }
     }
   }
 
@@ -51,6 +75,18 @@ $component: kdl-button;
 
     [data-gatsby-image-wrapper] {
       margin-right: 3.2rem;
+    }
+
+    @media(max-width: 767px) {
+      font-size: 1.6rem;
+      height: 4rem;
+      padding: 0 4rem;
+      font-weight: 700;
+
+      [data-gatsby-image-wrapper] {
+        margin-right: 2.4rem;
+        width: 24px;
+      }
     }
   }
 }

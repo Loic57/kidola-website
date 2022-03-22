@@ -3,6 +3,7 @@ $component-name: footer;
 .#{$component-name} {
 
   font-family: var(--font-family);
+  padding: 0 1.6rem 3.2rem;
 
   &__container {
     text-align: center;

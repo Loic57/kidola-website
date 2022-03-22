@@ -19,8 +19,7 @@ export default function Expand(props) {
         <h5 className="kdl-heading kdl-heading--h5 color--primary-500">{props.title}</h5>
         <button onClick={() => toggleExpand()}>
           <StaticImage
-            src="../assets/images/icon-deploy.png"
-            width={48}
+            src="../../assets/images/icon-deploy.png"
             quality={100}
             formats={["auto", "webp"]}
             alt="Kidola App"

@@ -1,12 +1,20 @@
 import * as React from "react"
 
+import LangSwitcher from '../lang-switcher/lang-switcher';
+
+import {useTranslation} from 'gatsby-plugin-react-i18next';
+
 import './header.scss';
 
-const Header = () => (
-  <header role="banner" className="kdl-header text--right">
-    <button type="button" className="kdl-button kdl-button--gradient kdl-button--sm margin-right--2">Se connecter</button>
-    <button type="button" className="kdl-button kdl-button--primary-300 kdl-button--sm">Lu</button>
-  </header>
-);
+export default function Header(props) {
 
-export default Header
+  const { t } = useTranslation();
+
+
+  return (
+    <header role="banner" className="kdl-header text--right">
+      <button type="button" className="kdl-button kdl-button--gradient kdl-button--sm margin-right--2">{t('btn.login')}</button>
+      <LangSwitcher {...props} />
+    </header>
+  )
+}
