@@ -5,6 +5,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `${__dirname}/src/assets/images/favicon/favicon.png`
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -21,7 +27,7 @@ module.exports = {
           interpolation: {
             escapeValue: false
           },
-          ns: ['index', 'terms'],
+          ns: ['index', 'terms', 'rgpd', 'cookies'],
           keySeparator: false,
           nsSeparator: ":"
         }

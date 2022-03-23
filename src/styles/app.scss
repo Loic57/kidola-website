@@ -14,13 +14,13 @@
 @import './components/foundations/paragraph/paragraph';
 
 @import './components/layouts/grid/grid';
-@import './components/layouts/footer/footer';
 
 @import './site';
 
 html {
   font-size: 62.5%;
-  overflow-x: hidden
+  overflow-x: hidden;
+  font-family: var(--font-family);
 }
 
 body, #___gatsby, #gatsby-focus-wrapper {

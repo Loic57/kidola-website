@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import {Link, useI18next} from 'gatsby-plugin-react-i18next';
+import { useI18next } from 'gatsby-plugin-react-i18next';
 
 
 import './lang-switcher.scss';

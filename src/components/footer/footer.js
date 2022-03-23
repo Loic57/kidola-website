@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 import { Trans } from 'gatsby-plugin-react-i18next';
 import { StaticImage } from "gatsby-plugin-image"
 
+import './footer.scss';
+
 export default function IndexPage(props) {
 
   return (
@@ -11,7 +13,7 @@ export default function IndexPage(props) {
         <div className="footer__line">
           <a href="tel:0032499618944" className="kdl-button kdl-button--icon">
             <StaticImage
-              src="../assets/images/icon-phone.png"
+              src="../../assets/images/icon-phone.png"
               width={40}
               quality={100}
               formats={["auto", "webp", "avif"]}
@@ -21,7 +23,7 @@ export default function IndexPage(props) {
           </a>
           <a href="mailto:hello@kidola.lu" className="kdl-button kdl-button--icon">
             <StaticImage
-              src="../assets/images/icon-phone.png"
+              src="../../assets/images/icon-phone.png"
               width={40}
               quality={100}
               formats={["auto", "webp", "avif"]}
@@ -65,7 +67,6 @@ export default function IndexPage(props) {
           <p className="kdl-paragraph kdl-paragraph--p2 margin-bottom--3 color--grey-500">
             <Link to='/terms' className="kdl-link"><Trans i18nKey="footer.terms" /></Link>&nbsp;
             •  <Link to='/rgpd' className="kdl-link"><Trans i18nKey="footer.rgpd" /></Link>&nbsp;
-            •  <Link to='/data-protection' className="kdl-link"><Trans i18nKey="footer.data-protection" /></Link>&nbsp;
             •  <Link to='/cookies' className="kdl-link"><Trans i18nKey="footer.cookies" /></Link>&nbsp; <br />
             <strong><Trans i18nKey="footer.address" /></strong> • <Trans i18nKey="footer.rcs" />
           </p>

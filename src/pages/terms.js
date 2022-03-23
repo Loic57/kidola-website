@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
-import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { useTranslation, Trans } from 'gatsby-plugin-react-i18next';
 import { StaticImage } from "gatsby-plugin-image"
 
 import Header from '../components/header/header'
@@ -12,7 +12,7 @@ import Footer from "../components/footer/footer"
 import "../styles/app.scss";
 
 
-export default function IndexPage(props) {
+export default function TermsPage(props) {
 
   const { t } = useTranslation();
 
@@ -36,6 +36,15 @@ export default function IndexPage(props) {
           alt="Kidola App"
           className="kdl-logo margin-bottom--10"
         />
+      </div>
+
+      <div className='kdl-container'>
+        <p className='kdl-paragraph kdl-paragraph--p3 margin-bottom--3'><Link to='/' className="kdl-link">{t('terms:back-link')}</Link></p>
+
+        <h1 className='kdl-heading kdl-heading--h1 color--primary-500 margin-bottom--3'>{t('terms:heading')}</h1>
+        <p className='kdl-paragraph kdl-paragraph--p3 margin-bottom--3'>
+          <Trans i18nKey="terms:text" />
+        </p>
       </div>
 
       <Footer {...props} />
