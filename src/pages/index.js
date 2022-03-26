@@ -54,7 +54,7 @@ export default function IndexPage(props) {
     });
 
     return cards.slice(0, advantages.number).map((card, index) => (
-      <div className={`kdl-grid__col kdl-grid__col--sm--6 kdl-grid__col--md--4 ${index + 1 !== cards.length && 'margin-bottom--4'}`} key={index}>
+      <div className={`kdl-grid__col kdl-grid__col--sm--6 kdl-grid__col--md--4 margin-bottom--4`} key={index}>
         <Card {...card} />
       </div>
     ))
@@ -64,10 +64,10 @@ export default function IndexPage(props) {
   return (
     <>
      <Seo
-        googleTitle={t('meta.googleTitle')}
-        googleDescription={t('meta.googleDescription')}
-        socialTitle={t('meta.socialTitle')}
-        socialDescription={t('meta.socialDescription')}
+        googleTitle={t('index:meta.googleTitle')}
+        googleDescription={t('index:meta.googleDescription')}
+        socialTitle={t('index:meta.socialTitle')}
+        socialDescription={t('index:meta.socialDescription')}
         author="Kidola"
       />
 
@@ -425,6 +425,7 @@ export const query = graphql`
             imageAlt
             bordered
             lang
+            statut
             image {
               childImageSharp {
                 gatsbyImageData(

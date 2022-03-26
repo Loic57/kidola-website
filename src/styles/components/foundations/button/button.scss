@@ -19,6 +19,8 @@ $component: kdl-button;
 
       @if map-deep-get($value, 'background-image') {
         background: map-deep-get($value, 'background-image');
+        animation: gradient 4s ease infinite;
+        background-size: 300% 100%;
       }
       @else {
         background-color: map-deep-get($value, 'background-color');
@@ -32,7 +34,7 @@ $component: kdl-button;
             color: map-deep-get($value, 'hover', 'color');
 
             @if map-deep-get($value, 'background-image') {
-              background: map-deep-get($value, 'hover', 'background-image');
+
             }
             @else {
               background-color: map-deep-get($value, 'hover', 'background-color');
@@ -88,5 +90,12 @@ $component: kdl-button;
         width: 24px;
       }
     }
+  }
+
+
+  @keyframes gradient {
+    0% { background-position: 0% 51%; }
+    50% { background-position: 100% 50%;}
+    100% { background-position: 0% 51%; }
   }
 }

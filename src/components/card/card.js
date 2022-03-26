@@ -15,6 +15,7 @@ export default function Card(props) {
         <h6 className="kdl-heading kdl-heading--h6 color--primary-500">{props.node.frontmatter.title}</h6>
       </header>
       <p className="kdl-paragraph kdl-paragraph--p3 color--primary-450">{props.node.frontmatter.description}</p>
+      {props.node.frontmatter.statut && <div class="text--center"><div class="kdl-button kdl-button--primary-300 kdl-button--sm margin-top--3">{props.node.frontmatter.statut}</div></div>}
     </article>
   )
 }
