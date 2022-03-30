@@ -23,7 +23,7 @@ export default function IndexPage(props) {
           </a>
           <a href="mailto:hello@kidola.lu" className="kdl-button kdl-button--icon">
             <StaticImage
-              src="../../assets/images/icon-phone.png"
+              src="../../assets/images/icon-mail.png"
               width={40}
               quality={100}
               formats={["auto", "webp", "avif"]}

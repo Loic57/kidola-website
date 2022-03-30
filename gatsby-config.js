@@ -21,7 +21,7 @@ module.exports = {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locale`,
-        languages: [`en`, `fr`, `de`, 'lu'],
+        languages: [`lu`, `fr`, `be`],
         defaultLanguage: `fr`,
         i18nextOptions: {
           interpolation: {
@@ -51,8 +51,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `content`,
-        path: `${__dirname}/content`,
+        name: `features`,
+        path: `${__dirname}/features`,
       },
     },
     {

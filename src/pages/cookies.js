@@ -59,7 +59,7 @@ export default function CookiesPage(props) {
         <p className='kdl-paragraph kdl-paragraph--p3 margin-bottom--4'>
           <Trans i18nKey="cookies:text-3">
           aaa
-            <ul class="kdl-list">
+            <ul className="kdl-list">
               <li>aaa</li>
               <li>aaa</li>
               <li>aaa</li>
