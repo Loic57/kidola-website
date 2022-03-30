@@ -36,7 +36,7 @@ export default function IndexPage(props) {
         <div className="footer__social">
           <a href="https://www.linkedin.com/company/kidola/" target="_blank" rel="noreferrer" className="button button--icon-only button--with-icon">
             <StaticImage
-              src="../assets/images/icon-linkedin.png"
+              src="../../assets/images/icon-linkedin.png"
               width={40}
               quality={100}
               formats={["auto", "webp", "avif"]}
@@ -45,7 +45,7 @@ export default function IndexPage(props) {
           </a>
           <a href="https://twitter.com/Kidolapp" className="button button--icon-only button--with-icon">
             <StaticImage
-              src="../assets/images/icon-twitter.png"
+              src="../../assets/images/icon-twitter.png"
               width={40}
               quality={100}
               formats={["auto", "webp", "avif"]}
@@ -54,7 +54,7 @@ export default function IndexPage(props) {
           </a>
           <a href="https://www.facebook.com/kidolapp/ " className="button button--icon-only button--with-icon">
             <StaticImage
-              src="../assets/images/icon-facebook.png"
+              src="../../assets/images/icon-facebook.png"
               width={40}
               quality={100}
               formats={["auto", "webp", "avif"]}
